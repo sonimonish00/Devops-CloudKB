@@ -3,6 +3,12 @@
  - GitOps : using Git everywhere from development to deployment. 
  - Wikimedia (org.) -> Mediawiki (soft./CMS) -> Wiki's (web apps) -> wikipedia (most popular app/product)
 	 - No Code/Low Code/CMS (Wordpress, drupal, mediawiki-Customwiki)/Headless CMS
+	 - **CMS -> Headless CMS -> SSG -> SSR**
+	   - CMS - Wordpress, Magento
+	   - Headless CMS - Strapi, netlify cms, wordpress headless, Ghost, sanity etc. (Headless DB, Ecommerce etc.)
+	   - Static Site Generators(SSG) - Gatsby, Hugo, Jekyll, Eleventy, React Static, Gitbook, Sveletekit
+	   - Server side Renderer (SSR supports SSG) - Next, Nuxt, Quasar etc.
+
  - Domain is name address to IP (DNS server), whereas hosting is Cloud server (web,email,etc.)
  - State : Stateless, state-full (HTTP, TCP, Websockets)
  - OS/Compute Env./CPU/VM/remote Workspace : Linux/MacOS/Windows (Intel/ARM/AMD)
