@@ -19,10 +19,10 @@
 	  - Horizontal (Adding resources)
 	  - Vertical (increasing capacity of current resources)
   - **CI/CD Tools :** 
-	  - GitOps : Gitlab CI/CD, Github Actions etc. [K8's based]
-	  - IaC (Infra. as code) : 
+	  - GitOps : Gitlab CI/CD, Github Actions etc. [K8's based & Directly packaged all in one | Other - Azure DevOps]
+	  - IaC (Infra. as code - provisioning or creating infra./server via code) : 
 		  - Dev. - Terraform (Hashicorp), AWS CloudFormation
-		  - Deployment - Travis CI, Circle CI, Jenkins, Ansible, Chef, Puppet, Saltstack etc.
+		  - Deployment (Custom) - Travis CI, Circle CI, Jenkins, Ansible, Chef, Puppet, Saltstack etc.
 	  - Others : Codeship, Fabric8 etc.
   - **Models** : 
 	  - **Pull**/Client Pull -  Server to be configured will pull its config. from the controlling server. Eg. Chef, Puppet, Gitops etc.
@@ -36,11 +36,12 @@
 	  - Shadow Deployment
 	  - A/B Testing Deployment
 	  - Others - Dark launch deployments, Hot Deployments, Partial Deployments etc.
-  - **Different ways to deploy** : [Self hosted VPS/IaaS -> PaaS -> Container/Docker/Kubernetes -> Container+serverless/Google Cloud run]
+  - **Different ways to deploy web apps** : [Self-hosted/IaaS -> PaaS/SaaS -> Container/Docker/Kubernetes/serverless-FaaS -> Hybrid-Container+serverless]
 	  - **Traditional** : Manually copy/pasting code (ftp) on prod server and config it.
-	  - **IaaS** : deploy web app (git) on self-host/custom/DIY Server/OS & Config it via SSH - VPS (GCP,AWZ,Azure,Vultr,Linode etc.)
-	  - **PaaS** : Deploy automatically on git push Trigger (Actions/CI-CD/yaml/hooks) on PaaS (Heroku, Vercel, Netlify etc.)
-	  - **SaaS+FaaS (GitOps) :** Deploy via Contanerized Cluster/Docker/K8 (SaaS) or SaaS + serverless (FaaS)(On-premise/self-hosted)
+	  - **IaaS** : deploy web app (git) on self-host/custom/DIY Server/OS & Config it via SSH - VPS (GCE, AWZ EC2, Azure VM, Vultr, Linode etc.)
+	  - **PaaS (devops/gitops) :** Deploy automatically on git push Trigger on PaaS (Heroku, Vercel, Netlify etc.) **OR** {All in one Pckg. - Github Actions/Gitlab CI-CD/Azure devops} **OR** GCP(app engine), AWS(elastic beanstalk,amplify,lightsail) Azure(app service)
+	  - **SaaS+FaaS (devops/gitops) :** Deploy via SaaS/Container/Docker/K8/GKE-GCE/AKE-ACE/ECS-EKS **OR** SaaS+Serverles/FaaS (On-premise/self-hosted - google cloud run, ACI, AWS App runner)
+	  - **NOTE (5 ways)** : In Short, Either do it manually(ftp/ssh) either on your own server/cloud-IaaS **OR** Deploy via PaaS(Vercel)/Devops Package (Actions/Gitlab CI-CD)/Cloud Solutions(App engine,beanstalk) **OR** Via container services **OR** Serverless/FaaS services **OR** Container+FaaS (Cloud run)
   - **Devops pipeline & Dev. env.**
 	  - **NOTE** : 
 		  - Sandbox could be dev/test/pre-pod env.
@@ -60,14 +61,14 @@
 ---
 
 ### Cloud [GCP, AWS, Azure] : IaaS/VM/HW/Servers -> PaaS/OS/DB -> SaaS/SW/Container-docker-K8's ~ FaaS/Serverless
-- **IaaS :** Digital Ocean, Linode, Rackspace, AWS EC2, GCE, Azure, Vultr, Render.com etc.
-- **PaaS (Deployment) :** Heroku | Netlify | Vercel | Github Pages/surge.sh | Google App Engine | Azure App Service | AWS Elastic Beanstalk | Engine Yard | JAMStack | Dokku (Digital Ocean) | Fly.io | pythonanywhere | Railway | AWS Elastic Beanstalk | Cyclic.sh
-- **SaaS/Containers :** Code-server, GitPod, Google Drive, Google Cloud Code, Codespace, cloud9, dropbox etc.
-- **FaaS/Serverless :** AWS Lambda
-- **SaaS+FaaS (Best of all) :** Google Cloud Run
+- **IaaS :** AWS EC2, Goole GCE, Azure VM, Digital Ocean, Linode, Rackspace, Vultr, Render.com etc.
+- **PaaS (Deployment) :** Heroku | Netlify | Vercel | Github Pages | Google App Engine | Azure App Service, Container Apps | AWS Elastic Beanstalk, Lightsail | Engine Yard | JAMStack | Dokku (Digital Ocean) | Fly.io | pythonanywhere | Railway | Cyclic.sh | Surge.sh
+- **SaaS/Containers :** Google Drive, dropbox, GKE/GCE, AKE/ACE, ECS/EKS etc.
+- **FaaS/Serverless :** AWS Lambda, Azure function, google cloud function
+- **SaaS+FaaS (Best of all) :** Google Cloud Run, AWS App Runner, Azure Container Instances(ACI)
 - **Other :** 
-	- **M/BaaS (Auto API's : Rest/graphql) :** Firebase | Hasura
-	- **DBaaS (Online DB) :** Airtable | MongoDB Atlas | ElephantSQL | YugaByteDB | Cockroachlabs | redislabs | Astra | Notion(PM) | G Sheets
+	- **M/BaaS (Auto API's : Rest/Graphql) :** Firebase | Hasura | AWS Amplify | Prisma | Back4Ap | Parse
+	- **DBaaS (Online DB) :** Airtable | MongoDB Atlas | ElephantSQL(PostgreSQL) | YugaByteDB | Cockroachlabs | redislabs | Astra(Cassandra) | Notion(PM) | G Sheets | Navisite (mySQL as service) | ElasticCloud | Google CloudSQL, Cloud Firestore | AWS DynamoDB, RDS | Azure MS SQL Server, CosmoDB, DocumentDB
 
 ---
 
